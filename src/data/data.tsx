@@ -1,4 +1,4 @@
-import {DownloadIcon, MapIcon} from '@heroicons/react/outline';
+import {MapIcon} from '@heroicons/react/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
@@ -64,18 +64,11 @@ export const heroData: Hero = {
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         In my free time time, you can catch me running <strong className="text-stone-100">long distance</strong>, races{' '}
-        <strong className="text-stone-100">banjo</strong>, and{' '}
-        <strong className="text-stone-100">local park runs</strong>.
+        and <strong className="text-stone-100">local park runs</strong>.
       </p>
     </>
   ),
   actions: [
-    {
-      href: '/Nothile.pdf',
-      text: 'Resume',
-      primary: true,
-      Icon: DownloadIcon,
-    },
     {
       href: `#${SectionId.Contact}`,
       text: 'Contact',
@@ -221,6 +214,7 @@ export const education: TimelineItem[] = [
 /**
  * Testimonial section
  */
+
 export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
   testimonials: [

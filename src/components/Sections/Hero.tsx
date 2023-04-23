@@ -1,14 +1,32 @@
 import {ChevronDownIcon} from '@heroicons/react/outline';
 import classNames from 'classnames';
+import lottie from 'lottie-web';
 import Image from 'next/image';
-import {FC, memo} from 'react';
+import {FC, memo, useEffect, useRef} from 'react';
 
-import {heroData, SectionId} from '../../data/data';
+import {aboutData, heroData, SectionId} from '../../data/data';
 import Section from '../Layout/Section';
 import Socials from '../Socials';
 
 const Hero: FC = memo(() => {
   const {imageSrc, name, description, actions} = heroData;
+  const {profileImageSrc, aboutItems} = aboutData;
+
+  const animationContainer = useRef(null);
+  const anim = useRef<null | any>(null);
+
+  useEffect(() => {
+    if (animationContainer.current) {
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      anim.current = lottie.loadAnimation({
+        container: animationContainer.current, // the dom element that will contain the animation
+
+        loop: true,
+        autoplay: true,
+        animationData: require('../../images/lottie/development.json'),
+      });
+    }
+  }, []);
 
   return (
     <Section noPadding sectionId={SectionId.Hero}>
@@ -33,7 +51,7 @@ const Hero: FC = memo(() => {
               {actions.map(({href, text, primary, Icon}) => (
                 <a
                   className={classNames(
-                    'flex gap-x-2 rounded-full border-2 bg-none py-2 px-4 text-sm font-medium text-white ring-offset-gray-700/80 hover:bg-gray-700/80 focus:outline-none focus:ring-2 focus:ring-offset-2 sm:text-base',
+                    'flex gap-x-2 rounded-full border-2 bg-none px-4 py-2 text-sm font-medium text-white ring-offset-gray-700/80 hover:bg-gray-700/80 focus:outline-none focus:ring-2 focus:ring-offset-2 sm:text-base',
                     primary ? 'border-orange-500 ring-orange-500' : 'border-white ring-white',
                   )}
                   href={href}
@@ -43,6 +61,13 @@ const Hero: FC = memo(() => {
                 </a>
               ))}
             </div>
+            {!!profileImageSrc && (
+              <div className="col-span-2 flex justify-center lg:justify-start">
+                <div className="relative h-24 w-24 overflow-hidden rounded-xl md:h-32 md:w-60">
+                  <span ref={animationContainer} />
+                </div>
+              </div>
+            )}
           </div>
         </div>
         <div className="absolute inset-x-0 bottom-6 flex justify-center">

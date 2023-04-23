@@ -1,19 +1,36 @@
 import classNames from 'classnames';
-// import Image from 'next/image';
-import {FC, memo} from 'react';
+import lottie from 'lottie-web';
+import {FC, memo, useEffect, useRef} from 'react';
 
 import {aboutData, SectionId} from '../../data/data';
 import Section from '../Layout/Section';
 
+//Animation
+
 const About: FC = memo(() => {
   const {profileImageSrc, description, aboutItems} = aboutData;
+  const animationContainer = useRef(null);
+  const anim = useRef<null | any>(null);
+
+  useEffect(() => {
+    if (animationContainer.current) {
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      anim.current = lottie.loadAnimation({
+        container: animationContainer.current, // the dom element that will contain the animation
+
+        loop: true,
+        autoplay: true,
+        animationData: require('../../images/lottie/developer.json'),
+      });
+    }
+  }, []);
   return (
     <Section className="bg-gray-400" sectionId={SectionId.About}>
       <div className={classNames('grid grid-cols-1 gap-y-4', {'md:grid-cols-4': !!profileImageSrc})}>
         {!!profileImageSrc && (
           <div className="col-span-1 flex justify-center md:justify-start">
             <div className="relative h-24 w-24 overflow-hidden rounded-xl md:h-32 md:w-32">
-              {/* <Image alt="about-me-image" layout="fill" objectFit="cover" src={profileImageSrc} /> */}
+              <span ref={animationContainer} />
             </div>
           </div>
         )}
