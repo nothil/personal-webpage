@@ -1,19 +1,17 @@
 import classNames from 'classnames';
 import lottie from 'lottie-web';
-import {FC, memo, UIEventHandler, useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import {FC, memo, useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {isApple, isMobile} from '../../config';
 import {aboutData, SectionId, testimonial} from '../../data/data';
-import {Testimonial} from '../../data/dataDef';
 import useInterval from '../../hooks/useInterval';
 import useWindow from '../../hooks/useWindow';
-import QuoteIcon from '../Icon/QuoteIcon';
 import Section from '../Layout/Section';
 
 const Testimonials: FC = memo(() => {
-  const {profileImageSrc, description, aboutItems} = aboutData;
+  const {profileImageSrc} = aboutData;
   const [activeIndex, setActiveIndex] = useState<number>(0);
-  const [scrollValue, setScrollValue] = useState(0);
+  const [scrollValue] = useState(0);
   const [parallaxEnabled, setParallaxEnabled] = useState(false);
 
   const itemWidth = useRef(0);
@@ -75,9 +73,9 @@ const Testimonials: FC = memo(() => {
     }
   }, [activeIndex, setTestimonial, testimonials.length]);
 
-  const handleScroll = useCallback<UIEventHandler<HTMLDivElement>>(event => {
-    setScrollValue(event.currentTarget.scrollLeft);
-  }, []);
+  // const handleScroll = useCallback<UIEventHandler<HTMLDivElement>>(event => {
+  //   setScrollValue(event.currentTarget.scrollLeft);
+  // }, []);
 
   useInterval(next, 10000);
 

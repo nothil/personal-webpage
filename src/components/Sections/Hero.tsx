@@ -10,7 +10,7 @@ import Socials from '../Socials';
 
 const Hero: FC = memo(() => {
   const {imageSrc, name, description, actions} = heroData;
-  const {profileImageSrc, aboutItems} = aboutData;
+  const {profileImageSrc} = aboutData;
 
   const animationContainer = useRef(null);
   const anim = useRef<null | any>(null);
