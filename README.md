@@ -18,4 +18,4 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### Open this project on vercel
 
-`https://personal-webpage-kbhc-git-development-nothil.vercel.app/`
+[https://personal-webpage-kbhc-git-development-nothil.vercel.app/](https://personal-webpage-kbhc-git-development-nothil.vercel.app/)
