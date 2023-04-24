@@ -33,7 +33,7 @@
       }
     ],
     "import/first": "error",
-    "import/newline-after-import": "error",
+    "import/newline-after-import": "off",
     "import/no-duplicates": "error",
     "import/order": "off",
     "no-irregular-whitespace": "off",
