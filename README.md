@@ -1,15 +1,21 @@
-# Getting Started with Create React App
+## Web profile
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project allow you to understand my skills.
 
-In the project directory, you can run:
+### To run this project
 
-### `npm install`
+`https://github.com/nothil/personal-webpage.git`
 
-### `npm run dev`
+### Install dependencies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+`Run npm install`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Run this project locally
+
+`npm run dev`
+
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+### Open this project on vercel
+
+`https://personal-webpage-kbhc-git-development-nothil.vercel.app/`

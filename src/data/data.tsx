@@ -3,13 +3,12 @@ import {MapIcon} from '@heroicons/react/outline';
 import GithubIcon from '../components/Icon/GithubIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import heroImage from '../images/header-background.jpg';
+import porfolioImage3 from '../images/portfolio/form.png';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
-import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
-import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
 import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
-import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
+import porfolioImage6 from '../images/portfolio/ptoject-calculator.png';
+import porfolioImage2 from '../images/portfolio/RGB-game.png';
+import porfolioImage5 from '../images/portfolio/ToDoList.png';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
@@ -29,8 +28,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'React Resume',
+  description: '',
 };
 
 /**
@@ -82,7 +81,7 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `I see this opportunity as away to expose myself and embark into great work environment, I believe I will contribute my skills.  `,
+  description: `I see this opportunity as away to expose myself and embark into great work environment.  `,
   aboutItems: [{label: 'Location', text: 'JHB, SA', Icon: MapIcon}],
 };
 
@@ -136,46 +135,40 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'Movie API',
+    description: 'I created a React movies API, using a free api.',
+    url: 'https://github.com/nothil/movies-api',
     image: porfolioImage1,
   },
   {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'Memory game',
+    description: 'I created Javascript random color picker game .',
+    url: 'https://github.com/nothil/colorRGB-Game.git',
     image: porfolioImage2,
   },
   {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'Back-end node file IO',
+    description: 'I have also explored a back-end .',
+    url: 'https://github.com/nothil/node-file-IO',
     image: porfolioImage3,
   },
   {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'TDD',
+    description: 'TDD project.',
+    url: 'https://github.com/nothil/TDD-projec',
     image: porfolioImage4,
   },
   {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'List creator',
+    description: 'This allows the user to create a list of items, CRUD.',
+    url: 'https://github.com/nothil/ToDoList',
     image: porfolioImage5,
   },
   {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'Calculator',
+    description: 'This allows the user to calculate (JS calculator).',
+    url: 'https://github.com/nothil/calculator',
     image: porfolioImage6,
-  },
-  {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage7,
   },
 ];
 
@@ -189,9 +182,9 @@ export const experience: TimelineItem[] = [
     title: 'Software Developer',
     content: (
       <p>
-        Work in all stages of development, with other teams,i.e design, mobile and strategy to deliver defined
-        requirements Creating server and database functionality. This experience has allowed me to develop the skill set
-        which is necessary to successfully execute the above mentioned role.
+        I was responsible to Work in all stages of development, with other teams,i.e design, mobile and strategy to
+        deliver defined requirements Creating server and database functionality. This experience has allowed me to
+        develop the skill set which is necessary to successfully execute the above mentioned role.
       </p>
     ),
   },
@@ -204,10 +197,16 @@ export const education: TimelineItem[] = [
     content: <p></p>,
   },
   {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'March 2019',
+    location: '',
+    title: '',
+    content: (
+      <p>
+        I started as a self taught developer, while I was working for a firm as an assistant auditor, that time I was
+        learning basic HTML and CSS, I came across a website where I applied for it, I was accepted for a software
+        development programme.
+      </p>
+    ),
   },
 ];
 
@@ -223,16 +222,6 @@ export const testimonial: TestimonialSection = {
       text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
       image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
     },
-    {
-      name: 'Jane Doe',
-      text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
-    },
-    {
-      name: 'Someone else',
-      text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
-    },
   ],
 };
 
@@ -242,7 +231,7 @@ export const testimonial: TestimonialSection = {
 
 export const contact: ContactSection = {
   headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  description: '.',
   items: [
     {
       type: ContactType.Email,
